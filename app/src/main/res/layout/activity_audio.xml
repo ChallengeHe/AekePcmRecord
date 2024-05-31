@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_audio_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Record"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_audio_record"
+        app:layout_constraintStart_toEndOf="@id/btn_audio_record"
+        app:layout_constraintTop_toTopOf="@id/btn_audio_record"
+        tools:text="00:00" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_audio_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Play"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_audio_record" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_save_pcm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save PCM"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_audio_play" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_pcm_file_path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_save_pcm"
+        tools:text="tv_pcm_file_path" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
